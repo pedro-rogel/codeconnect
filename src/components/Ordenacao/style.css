@@ -1,0 +1,14 @@
+.container__ordenacao {
+    display: flex;
+    gap:28px;
+    justify-content: center;
+}
+
+.link__1 {
+    color: var(--verde-destaque);
+}
+
+.link__2 {
+    color: var(--cinza-medio);
+    text-decoration: none;
+}
