@@ -1,42 +1,43 @@
-import "./style.css";
-import capa from "./assets/Code editor.png";
+
+
 import code from "./assets/code.svg";
 import chat from "./assets/chat.svg";
 import share from "./assets/share.svg";
-import profile from "./assets/Ellipse 1.png";
+import "./style.css";
 
-export default function Card() {
+export default function Card({id, imgUrl, resumo, titulo, LinhasDeCode, compartilhamentos, comentarios, usuario}) {
   return (
     <article className="card">
       <div className="card__image">
-        <img src={capa} alt="Imagem do post" />
+        <img src={imgUrl} alt="Imagem do post" />
       </div>
       <div className="card__conteudo">
         <div className="conteudo__txt">
-          <h3>Titulo do post</h3>
-          <p>Resumo do post</p>
+          <h3>{titulo}</h3>
+          <p>{resumo}</p>
         </div>
         <div className="conteudo__rodape">
           <ul>
             <li>
               <img src={code} alt="Icone para ver o código" />
-              100
+              {LinhasDeCode}
             </li>
             <li>
               <img src={share} alt="Icone para compartilhar" />
-              12
+              {compartilhamentos}
             </li>
             <li>
               <img src={chat} alt="Icone para abrir o chat da comunidade" />
-              10
+              {comentarios}
             </li>
           </ul>
           <div className="rodape__usuario">
-            <img src={profile} alt="Icone de usuário" />
-            pedro
+            <img src={usuario.imagem} alt="Icone de usuário" />
+            {usuario.nome}
           </div>
         </div>
       </div>
     </article>
   );
 }
+  
