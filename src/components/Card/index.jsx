@@ -1,5 +1,3 @@
-
-
 import code from "./assets/code.svg";
 import chat from "./assets/chat.svg";
 import share from "./assets/share.svg";
